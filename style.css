@@ -1,0 +1,51 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 50px;
+  background: #f0f0f0;
+}
+
+/* ===== Part 1: CSS Transitions + Animations ===== */
+.btn {
+  padding: 15px 30px;
+  border: none;
+  background: #0077ff;
+  color: white;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+  margin: 5px;
+}
+
+.btn:hover {
+  background: #0057cc;
+  transform: scale(1.1);
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 30px auto;
+  background: tomato;
+  border-radius: 10px;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Keyframe animation */
+@keyframes pulse {
+  0% { transform: scale(1); background: tomato; }
+  25% { transform: scale(1); background: indianred; }
+  50% { transform: scale(1.2); background: gold; }
+  75% { transform: scale(1.2); background: teal; }
+  100% { transform: scale(1); background: tomato; }
+}
+
+.animate {
+  animation: pulse 1s infinite;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+}
